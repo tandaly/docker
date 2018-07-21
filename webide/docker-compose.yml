@@ -2,8 +2,10 @@ version: '2'
 services:
   webide:
     image: webide/webide:latest
+    container_name: webide
+    privileged: true
     restart: always
     ports:
       - "8000:8080"
     volumes:
-      - ./workspace:/root/.coding-ide/workspace
+      - ./coding-ide-home:/root/.coding-ide
