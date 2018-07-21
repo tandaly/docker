@@ -1,0 +1,12 @@
+version: '2'
+services:
+  tomcat:
+    image: tomcat:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./conf/server.xml:/usr/local/tomcat/conf/server.xml
+      - ./webapps:/usr/local/tomcat/webapps
+      - ./logs:/usr/local/tomcat/logs
+      - /etc/localtime:/etc/localtime:ro
