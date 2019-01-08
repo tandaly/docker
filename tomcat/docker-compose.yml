@@ -13,4 +13,4 @@ services:
       #- ./webapps:/usr/local/tomcat/webapps
       - ./logs:/usr/local/tomcat/logs
       - /etc/localtime:/etc/localtime:ro
-    command: -m 256m
+    command: -m 512m
