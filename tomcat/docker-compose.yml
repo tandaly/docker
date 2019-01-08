@@ -3,7 +3,9 @@ services:
   tomcat:
     build:
       context: .
+    container_name: tomcat
     restart: always
+    privileged: true
     ports:
       - "8080:8080"
     volumes:
