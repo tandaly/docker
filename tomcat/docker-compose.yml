@@ -10,6 +10,6 @@ services:
       - "8080:8080"
     volumes:
       #- ./conf/server.xml:/usr/local/tomcat/conf/server.xml
-      - ./webapps:/usr/local/tomcat/webapps
+      #- ./webapps:/usr/local/tomcat/webapps
       - ./logs:/usr/local/tomcat/logs
       - /etc/localtime:/etc/localtime:ro
