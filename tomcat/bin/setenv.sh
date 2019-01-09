@@ -5,7 +5,7 @@ JAVA_OPTS="$JAVA_OPTS -Xms128m -Xmx${heap_size}m -XX:MaxPermSize=256m -server"
 CATALINA_OPTS="$CATALINA_OPTS -DserverType=rdtest -DserverName=first"
 
 export JAVA_OPTS="$JAVA_OPTS\
- -server 
+ -server\ 
 -Xms6000M\ 
 -Xmx6000M\ 
 -Xss512k\ 
