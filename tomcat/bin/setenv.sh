@@ -5,27 +5,27 @@ JAVA_OPTS="$JAVA_OPTS -Xms128m -Xmx${heap_size}m -XX:MaxPermSize=256m -server"
 CATALINA_OPTS="$CATALINA_OPTS -DserverType=rdtest -DserverName=first"
 
 export JAVA_OPTS="$JAVA_OPTS\
- -server\
- -Xms${heap_size}m\
- -Xmx${heap_size}m\
- -XX:OnOutOfMemoryError=/usr/share/scripts/on_server_crash.sh\
- -XX:+HeapDumpOnOutOfMemoryError\
- -XX:HeapDumpPath=/var/log/tomcat\
- -XX:MaxPermSize=128m\
- -XX:MaxNewSize=256m\
- -XX:NewSize=256m\
- -XX:SurvivorRatio=12\
- -XX:MaxTenuringThreshold=0\
- -XX:+UseConcMarkSweepGC\
- -XX:+CMSIncrementalMode\
- -XX:+CMSIncrementalPacing\
- -XX:+CMSClassUnloadingEnabled\
- -XX:+CMSPermGenSweepingEnabled\
- -XX:+DisableExplicitGC\
- -XX:+UseParNewGC\
- -XX:+UseTLAB\
- -Djava.awt.headless=true\
- -Duser.timezone=Asia/Shanghai\
+ -server 
+-Xms6000M\ 
+-Xmx6000M\ 
+-Xss512k\ 
+-XX:NewSize=2250M\ 
+-XX:MaxNewSize=2250M\ 
+-XX:PermSize=128M\
+-XX:MaxPermSize=256M\  
+-XX:+AggressiveOpts\ 
+-XX:+UseBiasedLocking\ 
+-XX:+DisableExplicitGC\ 
+-XX:+UseParNewGC\ 
+-XX:+UseConcMarkSweepGC\ 
+-XX:MaxTenuringThreshold=31\ 
+-XX:+CMSParallelRemarkEnabled\ 
+-XX:+UseCMSCompactAtFullCollection\ 
+-XX:LargePageSizeInBytes=128m \
+-XX:+UseFastAccessorMethods\ 
+-XX:+UseCMSInitiatingOccupancyOnly\
+-Duser.timezone=Asia/Shanghai\ 
+-Djava.awt.headless=true\
  -Dnewrelic.environment=production"
 
 #probe 

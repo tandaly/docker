@@ -17,5 +17,5 @@ services:
       - ./webapps:/usr/local/tomcat/webapps
       - ./logs:/usr/local/tomcat/logs
       #- /etc/localtime:/etc/localtime:ro
-    mem_limit: 1G
-    memswap_limit: 1G
+    mem_limit: 2G
+    memswap_limit: 2G
