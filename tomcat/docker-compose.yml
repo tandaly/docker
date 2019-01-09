@@ -10,9 +10,11 @@ services:
     ports:
       - "80:8080"
     volumes:
-      #- ./conf/server.xml:/usr/local/tomcat/conf/server.xml
+      - ./conf/server.xml:/usr/local/tomcat/conf/server.xml
+      - ./conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
       - ./bin/setenv.sh:/usr/local/tomcat/bin/setenv.sh
-      #- ./webapps:/usr/local/tomcat/webapps
+      - ./bin/catalina.sh:/usr/local/tomcat/bin/catalina.sh
+      - ./webapps:/usr/local/tomcat/webapps
       - ./logs:/usr/local/tomcat/logs
       #- /etc/localtime:/etc/localtime:ro
     mem_limit: 1G

@@ -1,13 +1,13 @@
 #!/bin/sh
 # JAVA-OPTIONS
-JAVA_OPTS="$JAVA_OPTS -Xms128m -Xmx1024m -XX:MaxPermSize=256m -server"
+JAVA_OPTS="$JAVA_OPTS -Xms128m -Xmx${heap_size}m -XX:MaxPermSize=256m -server"
 # CATALINA-OPTIONS
 CATALINA_OPTS="$CATALINA_OPTS -DserverType=rdtest -DserverName=first"
 
 export JAVA_OPTS="$JAVA_OPTS\
  -server\
- -Xms704m\
- -Xmx704m\
+ -Xms${heap_size}m\
+ -Xmx${heap_size}m\
  -XX:OnOutOfMemoryError=/usr/share/scripts/on_server_crash.sh\
  -XX:+HeapDumpOnOutOfMemoryError\
  -XX:HeapDumpPath=/var/log/tomcat\
@@ -25,4 +25,8 @@ export JAVA_OPTS="$JAVA_OPTS\
  -XX:+UseParNewGC\
  -XX:+UseTLAB\
  -Djava.awt.headless=true\
+ -Duser.timezone=Asia/Shanghai\
  -Dnewrelic.environment=production"
+
+#probe 
+export JAVA_OPTS=$JAVA_OPTS" -Dcom.sun.management.jmxremote"
