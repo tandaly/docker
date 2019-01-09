@@ -10,9 +10,7 @@ export JAVA_OPTS="$JAVA_OPTS\
 -Xmx6000M\ 
 -Xss512k\ 
 -XX:NewSize=2250M\ 
--XX:MaxNewSize=2250M\ 
--XX:PermSize=128M\
--XX:MaxPermSize=256M\  
+-XX:MaxNewSize=2250M\  
 -XX:+AggressiveOpts\ 
 -XX:+UseBiasedLocking\ 
 -XX:+DisableExplicitGC\ 
