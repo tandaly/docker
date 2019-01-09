@@ -11,6 +11,7 @@ services:
       - "80:8080"
     volumes:
       #- ./conf/server.xml:/usr/local/tomcat/conf/server.xml
+      - ./bin/setenv.sh:/usr/local/tomcat/bin/setenv.sh
       #- ./webapps:/usr/local/tomcat/webapps
       - ./logs:/usr/local/tomcat/logs
       #- /etc/localtime:/etc/localtime:ro
