@@ -29,4 +29,4 @@ export JAVA_OPTS="$JAVA_OPTS\
  -Dnewrelic.environment=production"
 
 #probe 
-#export JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote"
+export JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote"
