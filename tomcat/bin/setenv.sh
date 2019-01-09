@@ -25,5 +25,4 @@ export JAVA_OPTS="$JAVA_OPTS\
  -XX:+UseParNewGC\
  -XX:+UseTLAB\
  -Djava.awt.headless=true\
- -javaagent:$NR_JAR\
  -Dnewrelic.environment=production"
