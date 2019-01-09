@@ -3,6 +3,7 @@ services:
   tomcat:
     build:
       context: .
+    image: tomcat
     container_name: tomcat
     restart: always
     privileged: true
@@ -13,4 +14,6 @@ services:
       #- ./webapps:/usr/local/tomcat/webapps
       - ./logs:/usr/local/tomcat/logs
       - /etc/localtime:/etc/localtime:ro
+    mem_limit: 512M
+    memswap_limit: 2000000000
     mem_reservation: 512m
