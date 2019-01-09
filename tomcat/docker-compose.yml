@@ -8,12 +8,11 @@ services:
     restart: always
     privileged: true
     ports:
-      - "8080:8080"
+      - "8080:80"
     volumes:
       #- ./conf/server.xml:/usr/local/tomcat/conf/server.xml
       #- ./webapps:/usr/local/tomcat/webapps
       - ./logs:/usr/local/tomcat/logs
-      - /etc/localtime:/etc/localtime:ro
-    mem_limit: 512M
-    memswap_limit: 2000000000
-    mem_reservation: 512m
+      #- /etc/localtime:/etc/localtime:ro
+    mem_limit: 1G
+    memswap_limit: 1G
