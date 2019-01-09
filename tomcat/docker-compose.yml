@@ -19,4 +19,4 @@ services:
       #- /etc/localtime:/etc/localtime:ro
     mem_limit: 2G
     memswap_limit: 2G
-    entrypoint: entrypoint.sh
+    entrypoint: /entrypoint.sh
