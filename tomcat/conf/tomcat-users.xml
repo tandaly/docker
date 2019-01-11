@@ -46,6 +46,6 @@
   <role rolename="tomcat"/>
   <role rolename="poweruserplus"/>
   <role rolename="probeuser"/>
-  <user username="tomcat" password="tomcat" roles="manager,poweruser,probeuser,poweruserplus" />
+  <user username="tomcat" password="tomcat666" roles="manager,poweruser,probeuser,poweruserplus" />
 
 </tomcat-users>

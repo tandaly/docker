@@ -1,4 +1,4 @@
-FROM openjdk:8-jre
+FROM openjdk:8-jdk
 
 MAINTAINER tandaly@qq.com
 
@@ -7,8 +7,8 @@ ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 ENV TIME_ZONE Asia/Shanghai
 
+#预留空间 256M
 ENV RESERVED_MEGABYTES 256
-
 COPY entrypoint.sh /entrypoint.sh
 
 RUN mkdir -p "$CATALINA_HOME"
