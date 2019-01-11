@@ -82,7 +82,7 @@
     <Connector
           executor="tomcatThreadPool"
           port="8080"
-          protocol="org.apache.coyote.http11.Http11Nio2Protocol"
+          protocol="org.apache.coyote.http11.Http11AprProtocol"
           connectionTimeout="20000"
           maxConnections="10000"
           redirectPort="8443"
@@ -179,7 +179,7 @@
       </Realm>
 
       <Host name="localhost"  appBase="webapps"
-        unpackWARs="false" autoDeploy="false" reloadable="false">
+        unpackWARs="false" autoDeploy="false">
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
