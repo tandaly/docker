@@ -16,6 +16,9 @@ services:
       - ./conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
       - ./bin/setenv.sh:/usr/local/tomcat/bin/setenv.sh
       - ./bin/catalina.sh:/usr/local/tomcat/bin/catalina.sh
+      #- ./lib/log4j-1.2.17.jar:/usr/local/tomcat/lib/log4j-1.2.17.jar
+      #- ./lib/lo4j.properties:/usr/local/tomcat/lib/lo4j.properties
+      - ./conf/logging.properties:/usr/local/tomcat/conf/logging.properties
       - ./webapps:/usr/local/tomcat/webapps
       - ./logs:/usr/local/tomcat/logs
       #- /etc/localtime:/etc/localtime:ro

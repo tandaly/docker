@@ -79,6 +79,8 @@ RUN set -eux; \
     tar -xvf tomcat.tar.gz --strip-components=1; \
 	# 删除供Windows系统使用的.bat文件
     rm bin/*.bat; \
+    # 删除日志文件
+    rm conf/logging.properties; \
 	# 删除Tomcat压缩文件
     rm tomcat.tar.gz*; \
 	
@@ -145,4 +147,8 @@ RUN set -e \
     fi
 
 EXPOSE 8080
+
+# 输出控制台日志到文件并按日生成
+#ENTRYPOINT $CATALINA_HOME/bin/startup.sh && tail -f $CATALINA_HOME/logs/catalina.out
+
 CMD ["/entrypoint.sh"]

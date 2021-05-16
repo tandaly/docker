@@ -13,3 +13,4 @@ JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote"
 #JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -server -Xms13312m -Xmx13312m -XX:NewSize=3072m -XX:MaxNewSize=4096m -XX:PermSize=512m -XX:MaxPermSize=512m -XX:MaxTenuringThreshold=10 -XX:NewRatio=2 -XX:+DisableExplicitGC"
 #机子内存如果是 32G，一般 PermSize 配置是主要保证系统能稳定起来就行：
 #JAVA_OPTS="$JAVA_OPTS -Dfile.encoding=UTF-8 -server -Xms29696m -Xmx29696m -XX:NewSize=6144m -XX:MaxNewSize=9216m -XX:PermSize=1024m -XX:MaxPermSize=1024m -XX:MaxTenuringThreshold=10 -XX:NewRatio=2 -XX:+DisableExplicitGC"
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=192.168.36.13 -Djava.util.logging.mannager=org.apache.juli.ClassLoaderLogManager -Djava.util.logging.config.file=$CATALINA_HOME/conf/logging.properties"
